@@ -69,6 +69,6 @@ TimerManager.Instance.CreateTimer(
     10f,
     false,
     () => Debug.Log("Puzzle unlocked!")
-);
+);*/
 
 }

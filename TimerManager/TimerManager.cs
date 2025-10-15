@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TimerManager : MonoBehaviour
 {
-    private Dictionary<string, GameTimer> timers = new Dictionary<string, GameTimer>();
+    private Dictionary<string, GameTimer> timers = new();
 
     public static TimerManager Instance;
 
