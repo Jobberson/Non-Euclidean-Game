@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class GameTimer
+public class GameTimer : MonoBehaviour
 {
     public string ID;
     public float Duration;
