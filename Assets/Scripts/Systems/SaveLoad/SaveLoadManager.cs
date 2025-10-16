@@ -5,39 +5,21 @@ using AASave;
 public class SaveLoadManager : Singleton<SaveLoadManager>
 {
     public SaveSystem saveSystem;
-    
-    public static SaveLoadManager Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }   
 
     private void Start()
     {
-        // Check if save exists and enable Continue button accordingly
         bool hasSave = saveSystem.DoesDataExists("CurrentScene");
         UIManager.Instance.SetContinueButtonActive(hasSave);
     }
 
     public void NewGame()
     {
-        // delete previous save
         if (saveSystem.DoesDataExists("CurrentScene"))
         {
             saveSystem.Delete("CurrentScene");
         }
 
-        // Load first scene
-        SceneManager.LoadScene("Scene_01");
+        SceneController.Instance.LoadScene("Scene_01");
     }
 
     public void ContinueGame()
@@ -45,7 +27,7 @@ public class SaveLoadManager : Singleton<SaveLoadManager>
         if (saveSystem.DoesDataExists("CurrentScene"))
         {
             string sceneToLoad = saveSystem.Load("CurrentScene", "Scene_01").AsString();
-            SceneManager.LoadScene(sceneToLoad);
+            SceneController.Instance.LoadScene(sceneToLoad);
         }
         else
         {
@@ -57,5 +39,23 @@ public class SaveLoadManager : Singleton<SaveLoadManager>
     {
         string currentScene = SceneManager.GetActiveScene().name;
         saveSystem.Save("CurrentScene", currentScene);
+    }
+
+    public string GetSavedScene()
+    {
+        return saveSystem.Load("CurrentScene", "Scene_01").AsString();
+    }
+
+    public bool HasSave()
+    {
+        return saveSystem.DoesDataExists("CurrentScene");
+    }
+
+    public void DeleteSave()
+    {
+        if (HasSave())
+        {
+            saveSystem.Delete("CurrentScene");
+        }
     }
 }
