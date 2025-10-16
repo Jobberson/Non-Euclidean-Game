@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4da0df7a9827bf54ea1ad70db75b9e02
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 296859
+  packageName: Awesome Attributes
+  packageVersion: 1.0.6
+  assetPath: Assets/Plugins/AwesomeAttributes/Scripts/Demo (Optional)/Gradient/GradientDemo.cs
+  uploadId: 778639

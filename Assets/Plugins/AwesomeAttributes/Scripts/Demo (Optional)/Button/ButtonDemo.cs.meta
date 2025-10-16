@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7df6fe9ee3f09d94ea3b3c71b506ed0a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 296859
+  packageName: Awesome Attributes
+  packageVersion: 1.0.6
+  assetPath: Assets/Plugins/AwesomeAttributes/Scripts/Demo (Optional)/Button/ButtonDemo.cs
+  uploadId: 778639
